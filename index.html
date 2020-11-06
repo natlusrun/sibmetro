@@ -11,6 +11,8 @@
 		<link rel="shortcut icon" href="img/favicon.png" type="image/png">
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   	
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
@@ -21,20 +23,40 @@
 		<header>
 			<a href="#" class="logo"> <img src="img/logo.png" alt="" style="width: 70px;"> 	</a>
 			<div class="toggle" onclick="toggleMenu();"> </div>
+		
 			<ul class="menu">
 				<li>
 					<a href="#home">Главная</a>
 				</li>
-				<li>
-					<a href="#about">История компании </a>
-				</li>
-				<li>
-					<a href="#services">Направление</a>
+				<li class="dropdown">
+					<a href="#services" class="dropbtn">О компании</a>
+					<div class="dropdown-content"> 
+						
+						<a href="#" target="_blank"> История </a>
+						<a href="#"target="_blank" >Сертификаты</a>
+					
+
+					</div>	
+				<li class="dropdown">
+					<a href="#services" class="dropbtn">Направление</a>
+					<div class="dropdown-content"> 
+						
+						<a href="#" target="_blank"> ВОЛС </a>
+						<a href="#" target="_blank">РРЛ</a>
+						<a href="#" target="_blank">СКС</a>
+						<a href="#" target="_blank">Поставка оборудования</a> 
+						<a href="#" target="_blank">Софт</a> 
+
+					</div>	
+				
+				<li> 
+					<a href="#contact">Наши проекты</a>
 				</li>
 			<li> 
 					<a href="#contact">Контакты</a>
 				</li>
 			</ul>	
+		
 		</header>
 		<section class="banner" id="home">
 			<div class="textBx">
@@ -44,6 +66,31 @@
 			</div>
 		</section>
 		<section class="about" id="about">
+			<div class="counter-up">
+				<div class="content">
+				  <div class="box">
+					 <div class="icon"><i class="fas fa-history"></i></div>
+					 <div class="counter count" >1991 </div>
+					 <div class="text"> Основан в </div>
+				  </div>
+				  <div class="box">
+					 <div class="icon"><i class="fas fa-gift"></i></div>
+					 <div class="counter count">23</div>
+					 <div class="text">Завершенных проектов</div>
+				  </div>
+				  <div class="box">
+					 <div class="icon"><i class="fas fa-users"></i></div>
+					 <div class="counter count" >436</div>
+					 <div class="text">Наши клиенты</div>
+				  </div>
+				  <div class="box">
+					 <div class="icon"><i class="fas fa-award"></i></div>
+					 <div class="counter count" id="num">120</div>
+					 <div class="text">Полученно наград</div>
+				  </div>
+				</div>
+			 </div>
+			
 			<div class="heading">
 				<h2> История компании </h2>				
 			</div>
@@ -103,6 +150,7 @@
 			</div>
 		</section>
 		<section class="work" id="work">
+		
 			<div class="heading">
 				<h2> Наши последние работы </h2>		
 				<p> Lorem ipsum dolor, sit amet consectetur adipisicing elit.  </p>		
@@ -204,5 +252,6 @@
 		<script src="js/js.js" async defer>
 		
 		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</body>	
 </html>

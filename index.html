@@ -26,14 +26,14 @@
 		
 			<ul class="menu">
 				<li>
-					<a href="#home">Главная</a>
+					<a href="#container">Главная</a>
 				</li>
 				<li class="dropdown">
-					<a href="#services" class="dropbtn">О компании</a>
+					<a href="#about" class="dropbtn">О компании</a>
 					<div class="dropdown-content"> 
 						
-						<a href="#" target="_blank"> История </a>
-						<a href="#"target="_blank" >Сертификаты</a>
+						<a href="#about"> История </a>
+						<a href="./links/documents.html"target="_self" >Разрешительные документы</a>
 					
 
 					</div>	
@@ -41,16 +41,16 @@
 					<a href="#services" class="dropbtn">Направление</a>
 					<div class="dropdown-content"> 
 						
-						<a href="#" target="_blank"> ВОЛС </a>
-						<a href="#" target="_blank">РРЛ</a>
-						<a href="#" target="_blank">СКС</a>
-						<a href="#" target="_blank">Поставка оборудования</a> 
-						<a href="#" target="_blank">Софт</a> 
+						<a href="#" target="_self"> ВОЛС </a>
+						<a href="#" target="_self">РРЛ</a>
+						<a href="#" target="_self">СКС</a>
+						<a href="#" target="_self">Поставка оборудования</a> 
+						<a href="#" target="_self">Софт</a> 
 
 					</div>	
 				
 				<li> 
-					<a href="#contact">Наши проекты</a>
+					<a href="#work">Наши проекты</a>
 				</li>
 			<li> 
 					<a href="#contact">Контакты</a>
@@ -58,7 +58,7 @@
 			</ul>	
 		
 		</header>
-		<div class="container"> 
+		<div class="container" id="container"> 
 			<div class="slider">
 
 				 <div class="box1 box">
@@ -142,11 +142,11 @@
 			<svg xmlns="http://www.w3.org/2000/svg" class="prev" width="56.898" height="91" viewBox="0 0 56.898 91"><path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(0 91) rotate(-90)" fill="#fff"/></svg>
 			<svg xmlns="http://www.w3.org/2000/svg" class="next" width="56.898" height="91" viewBox="0 0 56.898 91"><path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(56.898) rotate(90)" fill="#fff"/></svg>
 			<div class="trail">
-					  <div class="box1 active">1</div>
-					  <div class="box2">2</div>
-					  <div class="box3">3</div>
-					  <div class="box4">4</div>
-					  <div class="box5">5</div>
+					  <div class="box1 active"><a href="#container">Главная</a></div>
+					  <div class="box2" ><a href="#about">О компании</a></div>
+					  <div class="box3"><a href="#services">Направление</a></div>
+					  <div class="box4"><a href="#work">Наши проекты</a></div>
+					  <div class="box5"><a href="#contact">Контакты</a></div>
 			</div>
 	  </div>  
 		<section class="about" id="about">
@@ -175,7 +175,7 @@
 				</div>
 			 </div>
 			
-			<div class="heading">
+			<div class="heading" id="about">
 				<h2> История компании </h2>				
 			</div>
 			<div class="content">
@@ -341,3 +341,5 @@
 		<script src="js/CSSRulePlugin3.min.js"></script>
 	</body>	
 </html>
+
+

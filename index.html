@@ -1,345 +1,537 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title> СИБМЕТРО </title>
-		<link rel="shortcut icon" href="img/favicon.png" type="image/png">
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-   	
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
-		<!--[if lt IE 7]>
-			<p class="browsehappy">You ae using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
-		<header>
-			<a href="#" class="logo"> <img src="img/logo.png" alt="" style="width: 70px;"> 	</a>
-			<div class="toggle" onclick="toggleMenu();"> </div>
-		
-			<ul class="menu">
-				<li>
-					<a href="#container">Главная</a>
-				</li>
-				<li class="dropdown">
-					<a href="#about" class="dropbtn">О компании</a>
-					<div class="dropdown-content"> 
-						
-						<a href="#about"> История </a>
-						<a href="./links/documents.html"target="_self" >Разрешительные документы</a>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>СИБМЕТРО</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/vendor.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script defer src="js/fontawesome/all.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    
+
+</head>
+
+<body id="top">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- header
+    ================================================== -->
+    <header>
+		<a href="#" class="logo"> <img src="img/logo.png" alt="" style="width: 70px;"> 	</a>
+		<div class="toggle" onclick="toggleMenu();"> </div>
+	
+		<ul class="menu">
+			<li>
+				<a href="#container">Главная</a>
+			</li>
+			<li class="dropdown">
+				<a href="#about" class="dropbtn">О компании</a>
+				<div class="dropdown-content"> 
 					
-
-					</div>	
-				<li class="dropdown">
-					<a href="#services" class="dropbtn">Направление</a>
-					<div class="dropdown-content"> 
-						
-						<a href="#" target="_self"> ВОЛС </a>
-						<a href="#" target="_self">РРЛ</a>
-						<a href="#" target="_self">СКС</a>
-						<a href="#" target="_self">Поставка оборудования</a> 
-						<a href="#" target="_self">Софт</a> 
-
-					</div>	
+					<a href="#about"> История </a>
+					<a href="./links/documents.html"target="_self" >Разрешительные документы</a>
 				
-				<li> 
-					<a href="#work">Наши проекты</a>
-				</li>
-			<li> 
-					<a href="#contact">Контакты</a>
-				</li>
-			</ul>	
-		
-		</header>
-		<div class="container" id="container"> 
-			<div class="slider">
 
-				 <div class="box1 box">
-					  <div class="bg"></div>
-					  <div class="details">
-							<h1>I'm the first Box</h1>
-							<p>
-								 Lorem ipsum dolor sit amet, consectetur adipiscing 
-								 elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-								 diam, ac mattis orci pellentesque eget. 
-							</p>
-							<button>Check Now</button>
-					  </div>
+				</div>	
+			<li class="dropdown">
+				<a href="#services" class="dropbtn">Направление</a>
+				<div class="dropdown-content"> 
+					
+					<a href="#" target="_self"> ВОЛС </a>
+					<a href="#" target="_self">РРЛ</a>
+					<a href="#" target="_self">СКС</a>
+					<a href="#" target="_self">Поставка оборудования</a> 
+					<a href="#" target="_self">Софт</a> 
 
-					  <div class="illustration"><div class="inner"></div></div>
-				 </div>
-									  
-				 
-				 <div class="box2 box">
-					  <div class="bg"></div>
-					  <div class="details">
-							<h1>I'm the second Box</h1>
-							<p>
-								 Lorem ipsum dolor sit amet, consectetur adipiscing 
-								 elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-								 diam, ac mattis orci pellentesque eget. 
-							</p>
-							<button>Check Now</button>
-					  </div>
-
-					  <div class="illustration"><div class="inner"></div></div>
-				 </div>
-									  
-				 <div class="box3 box">
-					  <div class="bg"></div>
-					  <div class="details">
-							<h1>I'm the third Box</h1>
-							<p>
-								 Lorem ipsum dolor sit amet, consectetur adipiscing 
-								 elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-								 diam, ac mattis orci pellentesque eget. 
-							</p>
-							<button>Check Now</button>
-					  </div>
-
-					  <div class="illustration"><div class="inner"></div></div>
-				 </div>
-									  
-				 <div class="box4 box">
-					  <div class="bg"></div>
-					  <div class="details">
-							<h1>I'm the fourth Box</h1>
-							<p>
-								 Lorem ipsum dolor sit amet, consectetur adipiscing 
-								 elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-								 diam, ac mattis orci pellentesque eget. 
-							</p>
-							<button>Check Now</button>
-					  </div>
-
-					  <div class="illustration"><div class="inner"></div></div>
-				 </div>
-									  
-				 <div class="box5 box">
-					  <div class="bg"></div>
-					  <div class="details">
-							<h1>I'm the fifth Box</h1>
-							<p>
-								 Lorem ipsum dolor sit amet, consectetur adipiscing 
-								 elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-								 diam, ac mattis orci pellentesque eget. 
-							</p>
-							<button>Check Now</button>
-					  </div>
-
-					  <div class="illustration"><div class="inner"></div></div>
-				 </div>
-									  
-			</div>
-
-			<svg xmlns="http://www.w3.org/2000/svg" class="prev" width="56.898" height="91" viewBox="0 0 56.898 91"><path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(0 91) rotate(-90)" fill="#fff"/></svg>
-			<svg xmlns="http://www.w3.org/2000/svg" class="next" width="56.898" height="91" viewBox="0 0 56.898 91"><path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(56.898) rotate(90)" fill="#fff"/></svg>
-			<div class="trail">
-					  <div class="box1 active"><a href="#container">Главная</a></div>
-					  <div class="box2" ><a href="#about">О компании</a></div>
-					  <div class="box3"><a href="#services">Направление</a></div>
-					  <div class="box4"><a href="#work">Наши проекты</a></div>
-					  <div class="box5"><a href="#contact">Контакты</a></div>
-			</div>
-	  </div>  
-		<section class="about" id="about">
-			<div class="counter-up">
-				<div class="content">
-				  <div class="box">
-					 <div class="icon"><i class="fas fa-history"></i></div>
-					 <div class="counter count" >1991 </div>
-					 <div class="text"> Основан в </div>
-				  </div>
-				  <div class="box">
-					 <div class="icon"><i class="fas fa-gift"></i></div>
-					 <div class="counter count">23</div>
-					 <div class="text">Завершенных проектов</div>
-				  </div>
-				  <div class="box">
-					 <div class="icon"><i class="fas fa-users"></i></div>
-					 <div class="counter count" >436</div>
-					 <div class="text">Наши клиенты</div>
-				  </div>
-				  <div class="box">
-					 <div class="icon"><i class="fas fa-award"></i></div>
-					 <div class="counter count" id="num">120</div>
-					 <div class="text">Полученно наград</div>
-				  </div>
-				</div>
-			 </div>
+				</div>	
 			
-			<div class="heading" id="about">
-				<h2> История компании </h2>				
-			</div>
-			<div class="content">
-				<div class="content-bx w50">
-					<h3> Начало </h3>
-					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates architecto officiis dolores, pariatur placeat necessitatibus nulla? Pariatur amet deserunt quia minima nam, illo consequuntur voluptatum officia labore adipisci repudiandae nulla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur reiciendis ut eligendi doloremque asperiores cumque, sed illo. Optio nemo repudiandae, cupiditate ipsa nisi quidem tempora necessitatibus dignissimos, ea illo magni. <br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, tenetur. Nulla exercitationem rerum qui offici. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ipsam dolorem excepturi esse dolores optio earum eaque, est maxime similique exercitationem beatae, dolor ipsum nihil voluptates. Quam similique soluta consequatur!</p>
-				
-				</div>
-				<div class="content-bx w50">
-					<img src="img/8855.jpg" alt="" class="img" >
-					</div>
- 
-			</div>
-		</section>
-		<section class="services" id="services">
-			<div class="heading white">
-				<h2> Наши направления </h2>		
-				<p> Lorem ipsum dolor, sit amet consectetur adipisicing elit.  </p>		
-			</div>
-			<div class="content">
-				<div class="services-bx">
-					<img src="icons/icon1.png" alt="">
-					<h2> Подключение B2B </h2>
-					<p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut quisquam cumque voluptate nesciunt, commodi</p>
-				</div>
-				<div class="services-bx">
-					<img src="icons/icon2.png" alt="">
-					<h2> Обслуживание сетей по РК </h2>
-					<p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut quisquam cumque voluptate nesciunt, commodi</p>
-				</div>
-				<div class="services-bx">
-					<img src="icons/icon3.png" alt="">
-					<h2> Строительство FTTB по РК </h2>
-					<p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut quisquam cumque voluptate nesciunt, commodi</p>
-				</div>
-				<div class="services-bx">
-					<img src="icons/icon4.png" alt="">
-					<h2> Частные включения </h2>
-					<p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut quisquam cumque voluptate nesciunt, commodi</p>
-				</div>
-				<div class="services-bx">
-					<img src="icons/icon5.png" alt="">
-					<h2> Строительство магистралей </h2>
-					<p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut quisquam cumque voluptate nesciunt, commodi</p>
-				</div>
-				<div class="services-bx">
-					<img src="icons/icon6.png" alt="">
-					<h2> Капитальное строительство  </h2>
-					<p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut quisquam cumque voluptate nesciunt, commodi</p>
-				</div>
-				<div class="services-bx">
-					<img src="icons/icon7.png" alt="">
-					<h2> Проектирование </h2>
-					<p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut quisquam cumque voluptate nesciunt, commodi</p>
-				</div>
-			</div>
-		</section>
-		<section class="work" id="work">
-		
-			<div class="heading">
-				<h2> Наши последние работы </h2>		
-				<p> Lorem ipsum dolor, sit amet consectetur adipisicing elit.  </p>		
-			</div>
-			<div class="content">
-				<div class="work-bx">
-					<img src="img/product1.jpg" alt="">
-				</div>
-				<div class="work-bx">
-					<img src="img/product2.jpg" alt="">
-				</div>
-				<div class="work-bx">
-					<img src="img/product3.jpg" alt="">
-				</div>
-				<div class="work-bx">
-					<img src="img/product4.jpg" alt="">
-				</div>
-				<div class="heading">
-					<a href="#" class="btn"> View More </a>	
-				</div>
-			</div>
-		</section>
-		<section class="team" id="team">
-			<div class="heading">
-				<h2> Наша Команда </h2>		
-				<p> Lorem ipsum dolor, sit amet consectetur adipisicing elit.  </p>		
-			</div>
-			<div class="content">
-				<div class="team-bx"> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis odit, error incidunt perferendis voluptatibus amet natus soluta, qui tenetur veniam eligendi possimus impedit ipsum blanditiis quia dolore repellat in deserunt.</p>
-				<h3> Someone Famous<br> <span> Creative Designer </span></h3>
-				</div>
-				<div class="team-bx"> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis odit, error incidunt perferendis voluptatibus amet natus soluta, qui tenetur veniam eligendi possimus impedit ipsum blanditiis quia dolore repellat in deserunt.</p>
-					<h3> Someone Famous<br> <span> Creative Designer </span></h3>
-					</div>
-			</div>
-		</section>
-		<section class="contact" id="contact">
-			<div class="heading white">
-				<h2> Контакты </h2>		
-				<p> Lorem ipsum dolor, sit amet consectetur adipisicing elit.  </p>		
-			</div>
-			<div class="content">
-				<div class="contact-info">
-				<h3> Связаться с нами</h3>
-				<div class="contact-info-bx">
-					<div class="box">
-						<div class="icon">
-							<i class="fa fa-map-marker">
+			<li> 
+				<a href="#work">Наши проекты</a>
+			</li>
+		<li> 
+				<a href="#contact">Контакты</a>
+			</li>
+		</ul>	
+	
+	</header> <!-- end s-header -->
 
-							</i>
-						</div>
-							<div class="text">
-							<h3> Наш Адресс </h3>
-							<p> Город Алматы <br> Водная, 26</p>
-						</div>
-					</div>
-					<div class="box">
-						<div class="icon">
-							<i class="fa fa-phone">
-								
-							</i>
-						</div>
-							<div class="text">
-							<h3> Телефоны	 </h3>
-							<p>  +7 (727) 317-17-07</p>
-						</div>
-					</div>
-					<div class="box">
-						<div class="icon">
-							<i class="fa fa-envelope-o">
-								
-							</i>
-						</div>
-							<div class="text">
-							<h3> Email </h3>
-							<p> info@sibmetro.kz</p>
-						</div>
-					</div>
-				</div>
 
-				</div>
-				<div class="form-bx">
-					<form action="#">
-						<h3> Message Me </h3>
-						<input type="text" placeholder="Full Name">
-						<input type="email" placeholder="Email">
-						<textarea placeholder="Your Message"></textarea>
-						<input type="submit" value="Send">
+    <!-- hero
+    ================================================== -->
+    <section id="hero" class="s-hero target-section">
+
+        <div class="s-hero__bg">
+            <div class="gradient-overlay"></div>
+        </div>
+
+        <div class="row s-hero__content">
+            <div class="column">
+
+                <h1>Hello.</h1>
+                <div class="s-hero__content-about">
+
+                    <p>
+                    We are Flare. We love <br>
+                    building great brands <br>
+                    & digital experiences.
+                    </p>
+    
+                    <footer>
+                        <div class="s-hero__content-social">
+                            <a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                            <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i></a>
+                        </div>
+                    </footer>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="s-hero__video">
+            <a class="s-hero__video-link" href="https://player.vimeo.com/video/117310401?color=01aef0&amp;title=0&amp;byline=0&amp;portrait=0" data-lity="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 12l-18 12v-24z"/></svg>
+                <span class="s-hero__video-text">Play Video</span>
+            </a>
+        </div>
+
+        <div class="s-hero__scroll">
+            <a href="#about" class="s-hero__scroll-link smoothscroll">
+                Scroll Down
+            </a>
+        </div>
+
+    </section> <!-- end s-hero -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about">
+
+        <div class="horizontal-line"></div>
+
+        <div class="row">
+            <div class="column large-12">
+
+                <div class="section-title" data-num="01" data-aos="fade-up">
+                    <h3 class="h6">Кто мы</h3>
+                </div>
+
+            </div>
+
+            <div class="column large-6 w-900-stack s-about__intro-text">
+                <h1 class="display-1" data-aos="fade-up">
+						ТОО «СИБМЕТРО»
 						
-					</form>
+                </h1>
+
+                <p class="lead" data-aos="fade-up">
+							«Мы приходим с решениями, а не с вопросами».
+							<br> ТОО «СИБМЕТРО» основано в 1992 году.
+
+В период с 1992 по 2011 год являлось генеральным подрядчиком 
+АО «Алматыметрокурылыс» в рамках проекта по строительству ППТ (Правого перегонного туннеля) в метрополитене г.Алматы.
+<p class="lead" data-aos="fade-up">Начиная с 2005 года ТОО «СИБМЕТРО»  занимается также промышленным и гражданским строительством: <br>
+	§ ЖБ конструкции <br>§ Фасадные работы и отделка <br>§ Наружные и внутренние инженерные сети <br>§ Электрические сети <br>§ Внутренние слаботочные и распределительные сети
+
+
+ </p>
+                </p>
+            </div>
+
+            <div class="column large-6 w-900-stack s-about__photo-block">
+                <div class="s-about__photo" data-aos="fade-up"></div>
+            </div>
+        </div>
+		  <div class="horizontal-line"></div>
+
+		  <div class="row">
+				<div class="column large-6">
+  
+					 <div class="section-title" data-aos="fade-up">
+						  
+					 </div>
+  
 				</div>
-			</div>
-		</section>
+				<div class="column large-6 w-900-stack s-about__picture_block">
+				  <div class="s-about__picture"></div>
+			 </div>
+				<div class="column large-12 w-900-stack s-about__intro-text">
+					 <h1 class="display-1" data-aos="fade-up">
+					  с 2009 года
+						
+					 </h1>
+  
+					 <p class="lead" data-aos="fade-up">
+					  Начиная с 2009 года команда ТОО «СИБМЕТРО»  занимается проектированием и строительством междугородних, межрайонных и внутрирайонных сетей связи РК. 
+					  Имеем опыт и отлаженные процессы по ведению проектов в любых условиях и в любых региональных зонах территории республики
+					  
+					  
+				</div>
+  
+		  
+				</div>
+		  </div>
+        <div class="row block-large-1-2 block-tab-full s-about__process item-list">
+            <div class="column item item-process" data-aos="fade-up">
+                <h3 class="item-title">Define</h3>
+                <p>
+                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque. 
+                Quis dolores totam voluptatibus molestiae non. Quae exercitationem 
+                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod 
+                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
+                </p>
+            </div>
+            <div class="column item item-process" data-aos="fade-up">
+                <h3 class="item-title">Design</h3>
+                <p>
+                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque. 
+                Quis dolores totam voluptatibus molestiae non. Quae exercitationem 
+                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod 
+                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
+                </p>
+            </div>
+            <div class="column item item-process" data-aos="fade-up">
+                <h3 class="item-title">Build</h3>
+                <p>
+                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque. 
+                Quis dolores totam voluptatibus molestiae non. Quae exercitationem 
+                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod 
+                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
+                </p>
+            </div>
+            <div class="column item item-process" data-aos="fade-up">
+                <h3 class="item-title">Launch</h3>
+                <p>
+                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque. 
+                Quis dolores totam voluptatibus molestiae non. Quae exercitationem 
+                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod 
+                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
+                </p>
+            </div>
+        </div>
 
-		<div class="copyright">
-			<p> Copyright © 2020 Сибметро. Все права защищены </p>
-		</div>
+	 </section> <!-- end s-about -->
+	 <section id="about" class="s-about">
 
-		<script src="js/js.js" async defer>
 		
-		</script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="js/gsap-lastest-beta.min.js"></script>
-		<script src="js/CSSRulePlugin3.min.js"></script>
-	</body>	
+
+
+    <!-- services
+    ================================================== -->
+    <section id="services" class="s-services">
+
+        <div class="row">
+            <div class="column large-12">
+                <div class="section-title" data-num="02" data-aos="fade-up">
+                    <h3 class="h6">Команда ТОО «СИБМЕТРО»:
+						</h3>
+                </div>
+            </div>
+            <div class="column large-6 w-900-stack">
+                <h1 class="display-1" data-aos="fade-up">
+						Сертифицированные менеджеры
+
+                </h1>
+            </div>
+            <div class="column large-6 w-900-stack">
+                <p class="lead" data-aos="fade-up">
+                Velit deleniti harum sit beatae sint repellendus expedita. Omnis possimus 
+                sed rerum tenetur ea ab aut minima magnam. Deserunt sit cupiditate 
+                similique eveniet earum. Consectetur dolores maxime quisquam voluptate magni.
+                Ut ex unde rem quod ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
+                </p>
+            </div>
+        </div>
+
+        <div class="row block-large-1-2 block-tab-full s-services__services item-list">
+            <div class="column item item-service" data-aos="fade-up">
+                <span class="service-icon service-icon--product-design"></span>
+                <h3 class="item-title">Квалифицированные инженеры
+					</h3>
+                <p>
+                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque. 
+                Quis dolores totam voluptatibus molestiae non. Quae exercitationem 
+                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod 
+                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
+                </p>
+            </div>
+            <div class="column item item-service" data-aos="fade-up">
+                <span class="service-icon service-icon--branding"></span>
+                <h3 class="item-title">Специалисты по работе с 3-ми сторонами
+					</h3>
+                <p>
+                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque. 
+                Quis dolores totam voluptatibus molestiae non. Quae exercitationem 
+                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod 
+                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
+                </p>
+            </div>
+            <div class="column item item-service" data-aos="fade-up">
+                <span class="service-icon service-icon--frontend"></span>
+                <h3 class="item-title">Многоопытные бригадиры и монтажники
+					</h3>
+                <p>
+                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque. 
+                Quis dolores totam voluptatibus molestiae non. Quae exercitationem 
+                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod 
+                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
+                </p>
+            </div>
+            <div class="column item item-service" data-aos="fade-up">
+                <span class="service-icon service-icon--research"></span>
+                <h3 class="item-title">Налаженные процессы
+					</h3>
+                <p>
+                Deserunt rerum perspiciatis quaerat quam numquam assumenda neque. 
+                Quis dolores totam voluptatibus molestiae non. Quae exercitationem 
+                cum numquam repudiandae. Beatae eum quae. Ut ex unde rem quod 
+                ipsum consequatur. blanditiis temporibus pariatur voluptatibus molestiae.
+                </p>
+            </div>
+            
+        </div>
+
+    </section> <!-- end s-services -->
+
+    <section id="portfolio" class="s-portfolio">
+
+        <div class="row s-porfolio__top">
+            <div class="column large-6 w-900-stack">
+                <div class="section-title" data-num="03" data-aos="fade-up">
+                    <h3 class="h6">ТЕХНИЧЕСКОЕ ОСНАЩЕНИЕ
+						</h3>
+                </div>
+            </div>
+            <div class="column large-6 w-900-stack">
+                <h1 class="display-1" data-aos="fade-up">
+						ТОО «СИБМЕТРО» обладает парком техники, а также есть рамочные договора с другими компаниями для привлечения специальной техники, необходимой для строительства:
+
+                </h1>
+            </div>
+        </div> <!-- end s-portfolio__top-->
+
+        <div class="row s-portfolio__list block-large-1-2 block-tab-full collapse">
+
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="/images/1.png" title="The Red Wheel" data-size="1050x700">
+                            <img src="/images/1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Branding</div>
+                        <h4 class="folio-item__title">The Red Wheel</h4>
+                    </div>
+                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
+                    <div class="folio-item__caption">
+                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                    </div>
+                </div>
+            </div> <!-- end column -->
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="/images/3.jpg" title="Music Life" data-size="1050x700">
+                            <img src="/images/3.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Frontend Design</div>
+                        <h4 class="folio-item__title">Music Life</h4>
+                    </div>
+                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
+                    <div class="folio-item__caption">
+                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                    </div>
+                </div>
+            </div> <!-- end column -->
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="/images/2.jpg" Title="OI Logo" data-size="1050x700">
+                            <img src="/images/2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Branding</div>
+                        <h4 class="folio-item__title">OI Logo</h4>
+                    </div>
+                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
+                    <div class="folio-item__caption">
+                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                    </div>
+                </div>
+            </div> <!-- end column -->
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="/images/4.jpg" title="Corrugated Sheets" data-size="1050x700">
+                            <img src="/images/4.jpg" 
+                                 alt="">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Frontend Design</div>
+                        <h4 class="folio-item__title">Corrugated Sheets</h4>
+                    </div>
+                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
+                    <div class="folio-item__caption">
+                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                    </div>
+                </div>
+            </div> <!-- end column -->
+           
+
+        </div> <!-- folio-list -->
+
+    </section> <!-- end s-portfolio -->
+
+
+    <!-- clients
+    ================================================== -->
+   
+
+
+    <!-- contact
+    ================================================== -->
+   
+
+
+    <!-- footer
+    ================================================== -->
+    <footer class="s-footer">
+        <div class="row row-y-top">
+
+            <div class="column large-8 medium-12">
+                <div class="row">
+                    <div class="column large-7 tab-12 s-footer__block">
+                        <h4 class="h6">Реквизиты компании:</h4>
+								
+								
+                        <p>
+									Товарищество с ограниченной ответственностью "СИБМЕТРО" <br>
+									Республика Казахстан, 050010, <br>
+									г. Алматы ул. Водная, 26 <br>
+								<a href="tel:+7 (727) 317-17-07">тел.: +7 (727) 317-17-07</a>
+								<p>БИН: 911040000448</p>
+								<p>KZ24 965 02F0 009454 005 в АО « ForteBank» в г. Алматы</p>
+								<p> БИК: IRTYKZKA</p>
+                        </p>
+                    </div>
+        
+                    <div class="column large-5 tab-12 s-footer__block">
+                        <h4 class="h6">Follow Us</h4 class="h6">
+        
+                        <ul class="s-footer__list">
+                            <li><a href="#0">Facebook</a></li>
+                            <li><a href="#0">Twitter</a></li>
+                            <li><a href="#0">Instagram</a></li>
+                            <li><a href="#0">Dribbble</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column large-4 medium-12 s-footer__block--end">
+                <a href="mailto:#0" class="btn h-full-width">Let's Talk</a>
+
+                <div class="ss-copyright">
+                    <span>Copyright Сибметро 2020</span> 
+                    <span>Design by <a href="https://www.styleshout.com/">natlusrun</a></span>
+                </div>
+            </div>
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">
+                    top
+                </a>
+            </div> <!-- end ss-go-top -->
+
+        </div>
+    </footer>
+    
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
 </html>
-
-

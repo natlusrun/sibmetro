@@ -16,12 +16,24 @@
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/vendor.css">
+	 <link rel="stylesheet" href="css/vendor.css">
+	 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@900&amp;display=swap">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Oswald:500" rel="stylesheet">
+<script>!function(e){"undefined"==typeof module?this.charming=e:module.exports=e}(function(e,n){"use strict";n=n||{};var t=n.tagName||"span",o=null!=n.classPrefix?n.classPrefix:"char",r=1,a=function(e){for(var n=e.parentNode,a=e.nodeValue,c=a.length,l=-1;++l<c;){var d=document.createElement(t);o&&(d.className=o+r,r++),d.appendChild(document.createTextNode(a[l])),n.insertBefore(d,e)}n.removeChild(e)};return function c(e){for(var n=[].slice.call(e.childNodes),t=n.length,o=-1;++o<t;)c(n[o]);e.nodeType===Node.TEXT_NODE&&a(e)}(e),e});
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
 
     <!-- script
     ================================================== -->
     <script src="js/modernizr.js"></script>
-    <script defer src="js/fontawesome/all.min.js"></script>
+	 <script defer src="js/fontawesome/all.min.js"></script>
+	 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
     <!-- favicons
     ================================================== -->
@@ -29,7 +41,249 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
     
+		<style>
+			  body {
+      background: #fff;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+    }
 
+	 .swiper-container {
+  width: 100%;
+  height: 100%;
+
+}
+
+.swiper-slide {
+      background-position: center;
+      background-size: cover;
+    
+      width: 1300px;
+      height: 100vh;
+
+    
+     
+
+    }
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  overflow: hidden;
+}
+.slide-image {
+  position: absolute;
+  top: -200px;
+  left: -200px;
+  width: calc(100% + 400px);
+  height: calc(100% + 400px);
+  background-position: 50% 50%;
+  background-size: cover;
+  
+}
+.slide-title {
+  font-size: 4rem;
+  line-height: 1;
+  max-width: 50%;
+  white-space: normal;
+  word-break: break-word;
+  color: #FFF;
+  z-index: 100;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+@media (min-width: 45em) {
+  .slide-title {
+    font-size: 7vw;
+    max-width: none;
+  }
+}
+.slide-title span {
+  white-space: pre;
+  display: inline-block;
+  opacity: 0;
+}
+
+.slideshow {
+  position: relative;
+  
+}
+.slideshow-pagination {
+  position: absolute;
+  bottom: 5rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s opacity;
+  z-index: 10;
+}
+.slideshow-pagination-item {
+  display: flex;
+  align-items: center;
+}
+.slideshow-pagination-item .pagination-number {
+  opacity: 0.5;
+}
+.slideshow-pagination-item:hover, .slideshow-pagination-item:focus {
+  cursor: pointer;
+}
+.slideshow-pagination-item:last-of-type .pagination-separator {
+  width: 0;
+}
+.slideshow-pagination-item.active .pagination-number {
+  opacity: 1;
+}
+.slideshow-pagination-item.active .pagination-separator {
+  width: 10vw;
+}
+.slideshow-navigation-button {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 5rem;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  color: #FFF;
+}
+.slideshow-navigation-button:hover, .slideshow-navigation-button:focus {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+}
+.slideshow-navigation-button.prev {
+  left: 0;
+}
+.slideshow-navigation-button.next {
+  right: 0;
+}
+
+.pagination-number {
+  font-size: 1.8rem;
+  color: #FFF;
+  font-family: "Oswald", sans-serif;
+  padding: 0 0.5rem;
+}
+
+.pagination-separator {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.25);
+  transition: all 0.3s ease;
+}
+@media (min-width: 45em) {
+  .pagination-separator {
+    display: block;
+  }
+}
+.pagination-separator-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  transform-origin: 0 0;
+}
+
+.gallery {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.gallery-container {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+ 
+  
+}
+
+.gallery-main {
+  width: 600px;
+  height: 300px;
+  box-shadow: 0 50px 75px 50px rgba(30, 30, 30, 0.18);
+  border: 1px solid #e9e9e9;
+}
+.gallery-main .swiper-button-prev, .gallery-main .swiper-button-next {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: auto;
+  left: auto;
+  height: 75px;
+  width: 40px;
+  color: #e9e9e9;
+  background: #1e1e1e;
+}
+.gallery-main .swiper-button-prev::after, .gallery-main .swiper-button-next::after {
+  font-size: 12px;
+}
+.gallery-main .swiper-button-prev {
+  right: 40px;
+  border-right: 1px solid #e9e9e9;
+}
+
+.gallery-title {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-family: "Epilogue", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: right;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+.swiper-slide-active .gallery-title {
+  animation: slide-in 0.3s ease-in both;
+}
+
+.gallery-thumbs {
+  order: -1;
+  width: 100px;
+  height: 300px;
+  margin-right: 15px;
+  padding-left: 15px;
+}
+.gallery-thumbs .swiper-slide img {
+  transition: 0.3s;
+}
+.gallery-thumbs .swiper-slide-active {
+  opacity: 0.9;
+}
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+.gallery-thumbs .swiper-slide-thumb-active img {
+  margin-left: -15px;
+}
+
+
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    right: -50%;
+  }
+}
+		</style>
 </head>
 
 <body id="top">
@@ -86,11 +340,60 @@
 		</ul>	
 	
 	</header> <!-- end s-header -->
-
+<!-- Swiper -->
+<div class="swiper-container slideshow">
+		  
+	<div class="swiper-wrapper">
+	  
+		 <div class="swiper-slide slide">
+			<div class="slide-image" style="background-image: url(./images/thumb-1920-810997.jpg)"></div>
+			<span class="slide-title">SIBMETRO</span>
+			
+		 </div>
+	  
+		 <div class="swiper-slide slide">
+			<div class="slide-image" style="background-image: url(./images/58619b488da1c.jpg)"></div>
+			<span class="slide-title">БЫСТРО</span>
+		 </div>
+	  
+	  <div class="swiper-slide slide">
+			<div class="slide-image" style="background-image: url(./images/zemlia_planeta_sviaz_176957_1920x1080-2.jpg"></div>
+			<span class="slide-title">Around the world</span>
+		 </div>
+	  
+<!--         <div class="swiper-slide slide">
+			<div class="slide-imageswiper-lazy" data-background="https://images.unsplash.com/photo-1538083024336-555cf8943ddc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=66b476a51b19889e13182c0e4827af18&auto=format&fit=crop&w=1950&q=80">
+			</div>
+			</div>
+			<span class="slide-title">Exotic places</span>
+		 </div>
+	  
+		 <div class="swiper-slide slide">
+			<div class="slide-image swiper-lazy" data-background="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e07d2457879a4e15577ec75a31023e47&auto=format&fit=crop&w=2134&q=80">
+			</div>
+			<span class="slide-title">Meet ocean</span>
+		 </div>
+	  
+		 <div class="swiper-slide slide">
+			<div class="slide-image swiper-lazy" data-background="https://images.unsplash.com/photo-1482059470115-0aadd6bf6834?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=267bba9a4e280ec64388fe8fb01e9d1b&auto=format&fit=crop&w=1950&q=80">
+			</div>
+			<span class="slide-title">Around the world</span>
+		 </div> -->
+		 
+	</div>
+	
+	<div class="slideshow-pagination"></div>
+	
+	<div class="slideshow-navigation">
+		 <div class="slideshow-navigation-button prev"><span class="fas fa-chevron-left"></span></div>
+		 <div class="slideshow-navigation-button next"><span class="fas fa-chevron-right"></span></div>
+	</div>
+	
+ </div>
 
     <!-- hero
     ================================================== -->
-    <section id="hero" class="s-hero target-section">
+    <!-- <section id="hero" class="s-hero target-section">
 
         <div class="s-hero__bg">
             <div class="gradient-overlay"></div>
@@ -99,21 +402,16 @@
         <div class="row s-hero__content">
             <div class="column">
 
-                <h1>Hello.</h1>
+                <h1>Hello</h1>
                 <div class="s-hero__content-about">
 
                     <p>
-                    We are Flare. We love <br>
-                    building great brands <br>
-                    & digital experiences.
+							«Мы приходим с решениями, <br> а не с вопросами»
                     </p>
     
                     <footer>
                         <div class="s-hero__content-social">
-                            <a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                            <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                            <a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i></a>
+                           <h3> TOO «СИБМЕТРО»</h3>
                         </div>
                     </footer>
                 </div>
@@ -121,12 +419,7 @@
             </div>
         </div>
 
-        <div class="s-hero__video">
-            <a class="s-hero__video-link" href="https://player.vimeo.com/video/117310401?color=01aef0&amp;title=0&amp;byline=0&amp;portrait=0" data-lity="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 12l-18 12v-24z"/></svg>
-                <span class="s-hero__video-text">Play Video</span>
-            </a>
-        </div>
+       
 
         <div class="s-hero__scroll">
             <a href="#about" class="s-hero__scroll-link smoothscroll">
@@ -134,7 +427,7 @@
             </a>
         </div>
 
-    </section> <!-- end s-hero -->
+    </section> end s-hero -->
 
 
     <!-- about
@@ -342,83 +635,90 @@
 
                 </h1>
             </div>
-        </div> <!-- end s-portfolio__top-->
-
-        <div class="row s-portfolio__list block-large-1-2 block-tab-full collapse">
-
-            <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="/images/1.png" title="The Red Wheel" data-size="1050x700">
-                            <img src="/images/1.png" alt="">
-                        </a>
-                    </div>
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Branding</div>
-                        <h4 class="folio-item__title">The Red Wheel</h4>
-                    </div>
-                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                    </div>
-                </div>
-            </div> <!-- end column -->
-            <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="/images/3.jpg" title="Music Life" data-size="1050x700">
-                            <img src="/images/3.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Frontend Design</div>
-                        <h4 class="folio-item__title">Music Life</h4>
-                    </div>
-                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                    </div>
-                </div>
-            </div> <!-- end column -->
-            <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="/images/2.jpg" Title="OI Logo" data-size="1050x700">
-                            <img src="/images/2.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Branding</div>
-                        <h4 class="folio-item__title">OI Logo</h4>
-                    </div>
-                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                    </div>
-                </div>
-            </div> <!-- end column -->
-            <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="/images/4.jpg" title="Corrugated Sheets" data-size="1050x700">
-                            <img src="/images/4.jpg" 
-                                 alt="">
-                        </a>
-                    </div>
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Frontend Design</div>
-                        <h4 class="folio-item__title">Corrugated Sheets</h4>
-                    </div>
-                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                    </div>
-                </div>
-            </div> <!-- end column -->
-           
-
-        </div> <!-- folio-list -->
-
+		  </div> <!-- end s-portfolio__top-->
+		  <div class="gallery">
+		  <div class="gallery-container">
+			<div class="swiper-container gallery-main">
+			  <div class="swiper-wrapper">
+				 <div class="swiper-slide">
+					<div class="gallery-title">Vertical<br>Swiper</div>
+					<img src="https://picsum.photos/seed/slide1/600/300" alt="Slide 01">
+				 </div>
+				 <div class="swiper-slide">
+					<div class="gallery-title">Slide 02</div>
+					<img src="https://picsum.photos/seed/slide2/600/300" alt="Slide 02">
+				 </div>
+				 <div class="swiper-slide">
+					<div class="gallery-title">Slide 03</div>
+					<img src="https://picsum.photos/seed/slide3/600/300" alt="Slide 03">
+				 </div>
+				 <div class="swiper-slide">
+					<div class="gallery-title">Slide 04</div>
+					<img src="https://picsum.photos/seed/slide4/600/300" alt="Slide 04">
+				 </div>
+				 <div class="swiper-slide">
+					<div class="gallery-title">Slide 04</div>
+					<img src="https://picsum.photos/seed/slide5/600/300" alt="Slide 05">
+				 </div>
+				 <div class="swiper-slide">
+					<div class="gallery-title">Slide 06</div>
+					<img src="https://picsum.photos/seed/slide6/600/300" alt="Slide 06">
+				 </div>
+				 <div class="swiper-slide">
+					<div class="gallery-title">Slide 07</div>
+					<img src="https://picsum.photos/seed/slide7/600/300" alt="Slide 07">
+				 </div>
+				 <div class="swiper-slide">
+					<div class="gallery-title">Slide 08</div>
+					<img src="https://picsum.photos/seed/slide8/600/300" alt="Slide 08">
+				 </div>
+				 <div class="swiper-slide">
+					<div class="gallery-title">Slide 09</div>
+					<img src="https://picsum.photos/seed/slide9/600/300" alt="Slide 09">
+				 </div>
+				 <div class="swiper-slide">
+					<div class="gallery-title">Slide 10</div>
+					<img src="https://picsum.photos/seed/slide10/600/300" alt="Slide 10">
+				 </div>
+			  </div>
+			  <div class="swiper-button-prev"></div>
+			  <div class="swiper-button-next"></div>
+			</div>
+			<div class="swiper-container gallery-thumbs">
+			  <div class="swiper-wrapper">
+				 <div class="swiper-slide">
+					<img src="https://picsum.photos/seed/slide1/115/100" alt="Slide 01"></div>
+				 <div class="swiper-slide">
+					<img src="https://picsum.photos/seed/slide2/115/100" alt="Slide 02"></div>
+				 <div class="swiper-slide">
+					<img src="https://picsum.photos/seed/slide3/115/100" alt="Slide 03"></div>
+				 <div class="swiper-slide">
+					<img src="https://picsum.photos/seed/slide4/115/100" alt="Slide 04">
+				 </div>
+				 <div class="swiper-slide">
+					<img src="https://picsum.photos/seed/slide5/115/100" alt="Slide 05">
+				 </div>
+				 <div class="swiper-slide">
+					<img src="https://picsum.photos/seed/slide6/115/100" alt="Slide 06">
+				 </div>
+				 <div class="swiper-slide">
+					<img src="https://picsum.photos/seed/slide7/115/100" alt="Slide 07">
+				 </div>
+				 <div class="swiper-slide">
+					<img src="https://picsum.photos/seed/slide8/115/100" alt="Slide 08">
+				 </div>
+				 <div class="swiper-slide">
+					<img src="https://picsum.photos/seed/slide9/115/100" alt="Slide 09">
+				 </div>
+				 <div class="swiper-slide">
+					<img src="https://picsum.photos/seed/slide10/115/100" alt="Slide 10">
+				 </div>
+			  </div>
+			</div>
+		 </div>
+		</div>
+		 
+		 
     </section> <!-- end s-portfolio -->
 
 
@@ -455,10 +755,10 @@
                     </div>
         
                     <div class="column large-5 tab-12 s-footer__block">
-                        <h4 class="h6">Follow Us</h4 class="h6">
+                        <h4 class="h6">Ссылки</h4 class="h6">
         
                         <ul class="s-footer__list">
-                            <li><a href="#0">Facebook</a></li>
+                            <li><a href="#header">Главная</a></li>
                             <li><a href="#0">Twitter</a></li>
                             <li><a href="#0">Instagram</a></li>
                             <li><a href="#0">Dribbble</a></li>
@@ -468,7 +768,7 @@
             </div>
 
             <div class="column large-4 medium-12 s-footer__block--end">
-                <a href="mailto:#0" class="btn h-full-width">Let's Talk</a>
+                <a href="index.html" class="btn h-full-width">Главная</a>
 
                 <div class="ss-copyright">
                     <span>Copyright Сибметро 2020</span> 
@@ -527,10 +827,274 @@
 
 
     <!-- Java Script
-    ================================================== -->
+	 ================================================== -->
+	 <script>
+		// <!-- var swiper = new Swiper('.swiper-container', {
+		// effect: 'coverflow',
+		// grabCursor: true,
+		// centeredSlides: true,
+		// slidesPerView: 'auto',
+		// coverflowEffect: {
+		//   rotate: 50,
+		//   stretch: 0,
+		//   depth: 100,
+		//   modifier: 1,
+		//   slideShadows: true,
+		// },
+		// pagination: {
+		//   el: '.swiper-pagination',
+		//   clickable: true,
+		// },
+
+		// keyboard: {
+      //   enabled: true,
+      // },
+      // pagination: {
+      //   el: '.swiper-pagination',
+       
+      // },
+		// autoplay: {
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // },
+		// parallax: true, }); -->
+
+    
+	// The Slideshow class.
+class Slideshow {
+    constructor(el) {
+        
+        this.DOM = {el: el};
+      
+        this.config = {
+          slideshow: {
+            delay: 3000,
+            pagination: {
+              duration: 3,
+            }
+          }
+        };
+        
+        // Set the slideshow
+        this.init();
+      
+    }
+    init() {
+      
+      var self = this;
+      
+      // Charmed title
+      this.DOM.slideTitle = this.DOM.el.querySelectorAll('.slide-title');
+      this.DOM.slideTitle.forEach((slideTitle) => {
+        charming(slideTitle);
+      });
+      
+      // Set the slider
+      this.slideshow = new Swiper (this.DOM.el, {
+			effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+          loop: true,
+          autoplay: {
+            delay: this.config.slideshow.delay,
+            disableOnInteraction: false,
+          },
+          speed: 500,
+          preloadImages: true,
+          updateOnImagesReady: true,
+          
+          // lazy: true,
+          // preloadImages: false,
+
+          pagination: {
+            el: '.slideshow-pagination',
+            clickable: true,
+            bulletClass: 'slideshow-pagination-item',
+            bulletActiveClass: 'active',
+            clickableClass: 'slideshow-pagination-clickable',
+            modifierClass: 'slideshow-pagination-',
+            renderBullet: function (index, className) {
+              
+              var slideIndex = index,
+                  number = (index <= 8) ? '0' + (slideIndex + 1) : (slideIndex + 1);
+              
+              var paginationItem = '<span class="slideshow-pagination-item">';
+              paginationItem += '<span class="pagination-number">' + number + '</span>';
+              paginationItem = (index <= 8) ? paginationItem + '<span class="pagination-separator"><span class="pagination-separator-loader"></span></span>' : paginationItem;
+              paginationItem += '</span>';
+            
+              return paginationItem;
+              
+            },
+          },
+
+          // Navigation arrows
+          navigation: {
+            nextEl: '.slideshow-navigation-button.next',
+            prevEl: '.slideshow-navigation-button.prev',
+          },
+
+          // And if we need scrollbar
+          scrollbar: {
+            el: '.swiper-scrollbar',
+          },
+        
+          on: {
+            init: function() {
+              self.animate('next');
+            },
+          }
+        
+        });
+      
+        // Init/Bind events.
+        this.initEvents();
+        
+    }
+    initEvents() {
+        
+        this.slideshow.on('paginationUpdate', (swiper, paginationEl) => this.animatePagination(swiper, paginationEl));
+        //this.slideshow.on('paginationRender', (swiper, paginationEl) => this.animatePagination());
+
+        this.slideshow.on('slideNextTransitionStart', () => this.animate('next'));
+        
+        this.slideshow.on('slidePrevTransitionStart', () => this.animate('prev'));
+            
+    }
+    animate(direction = 'next') {
+      
+        // Get the active slide
+        this.DOM.activeSlide = this.DOM.el.querySelector('.swiper-slide-active'),
+        this.DOM.activeSlideImg = this.DOM.activeSlide.querySelector('.slide-image'),
+        this.DOM.activeSlideTitle = this.DOM.activeSlide.querySelector('.slide-title'),
+        this.DOM.activeSlideTitleLetters = this.DOM.activeSlideTitle.querySelectorAll('span');
+      
+        // Reverse if prev  
+        this.DOM.activeSlideTitleLetters = direction === "next" ? this.DOM.activeSlideTitleLetters : [].slice.call(this.DOM.activeSlideTitleLetters).reverse();
+      
+        // Get old slide
+        this.DOM.oldSlide = direction === "next" ? this.DOM.el.querySelector('.swiper-slide-prev') : this.DOM.el.querySelector('.swiper-slide-next');
+        if (this.DOM.oldSlide) {
+          // Get parts
+          this.DOM.oldSlideTitle = this.DOM.oldSlide.querySelector('.slide-title'),
+          this.DOM.oldSlideTitleLetters = this.DOM.oldSlideTitle.querySelectorAll('span'); 
+          // Animate
+          this.DOM.oldSlideTitleLetters.forEach((letter,pos) => {
+            TweenMax.to(letter, .3, {
+              ease: Quart.easeIn,
+              delay: (this.DOM.oldSlideTitleLetters.length-pos-1)*.04,
+              y: '50%',
+              opacity: 0
+            });
+          });
+        }
+      
+        // Animate title
+        this.DOM.activeSlideTitleLetters.forEach((letter,pos) => {
+					TweenMax.to(letter, .6, {
+						ease: Back.easeOut,
+						delay: pos*.05,
+						startAt: {y: '50%', opacity: 0},
+						y: '0%',
+						opacity: 1
+					});
+				});
+      
+        // Animate background
+        TweenMax.to(this.DOM.activeSlideImg, 1.5, {
+            ease: Expo.easeOut,
+            startAt: {x: direction === 'next' ? 200 : -200},
+            x: 0,
+        });
+      
+        //this.animatePagination()
+    
+    }
+    animatePagination(swiper, paginationEl) {
+            
+      // Animate pagination
+      this.DOM.paginationItemsLoader = paginationEl.querySelectorAll('.pagination-separator-loader');
+      this.DOM.activePaginationItem = paginationEl.querySelector('.slideshow-pagination-item.active');
+      this.DOM.activePaginationItemLoader = this.DOM.activePaginationItem.querySelector('.pagination-separator-loader');
+      
+      console.log(swiper.pagination);
+      // console.log(swiper.activeIndex);
+      
+      // Reset and animate
+        TweenMax.set(this.DOM.paginationItemsLoader, {scaleX: 0});
+        TweenMax.to(this.DOM.activePaginationItemLoader, this.config.slideshow.pagination.duration, {
+          startAt: {scaleX: 0},
+          scaleX: 1,
+        });
+      
+      
+    }
+    
+}
+
+const slideshow = new Slideshow(document.querySelector('.slideshow'));
+var galleryThumbs = new Swiper(".gallery-thumbs", {
+  centeredSlides: true,
+  centeredSlidesBounds: true,
+  slidesPerView: 3,
+  watchOverflow: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  direction: 'vertical'
+});
+
+var galleryMain = new Swiper(".gallery-main", {
+  watchOverflow: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  preventInteractionOnTransition: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  effect: 'fade',
+    fadeEffect: {
+    crossFade: true
+  },
+  autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+  thumbs: {
+    swiper: galleryThumbs
+  }
+});
+
+galleryMain.on('slideChangeTransitionStart', function() {
+  galleryThumbs.slideTo(galleryMain.activeIndex);
+});
+
+galleryThumbs.on('transitionStart', function(){
+  galleryMain.slideTo(galleryThumbs.activeIndex);
+});
+
+
+
+	  </script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+	 <script src="js/main.js"></script>
+	 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
 </body>
 

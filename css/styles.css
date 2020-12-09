@@ -89,6 +89,7 @@
  * ------------------------------------------------------------------- */
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Nunito+Sans:300,300i,400,400i,600,600i,700,700i&display=swap");
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption:200,300,400,500,600,700,800,900&display=swap');
 
 :root {
 	--font-1: "Nunito Sans", sans-serif;
@@ -99,6 +100,10 @@
 	--font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
 }
 
+* {
+	font-family: 'PT Sans Caption', sans-serif;
+	scroll-behavior: smooth;
+}
 
 /* ------------------------------------------------------------------- 
  * ## colors
@@ -3724,60 +3729,60 @@ html.no-csstransitions .s-hero__content {
 /* ------------------------------------------------------------------- 
  * ## Parallax Section
  * ------------------------------------------------------------------- */
-	.box-section {
-		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		min-height: 100vh;
-	}
+.box-section {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
 
-	.box-section h2 {
-		margin-left: 200px;
-		font-size: 4em;
-		color:#fff;
-		margin-bottom: 20px;
-	}
+.box-section h2 {
+	margin-left: 200px;
+	font-size: 4em;
+	color: #fff;
+	margin-bottom: 20px;
+}
 
-	.box-section .box-container {
-		position: relative;
-		width: 1000px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
+.box-section .box-container {
+	position: relative;
+	width: 1000px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 
-	.box-section .box-container .imgBx {
-		position: relative;
-		width: 800px;
-		height: 400px;
-		overflow: hidden;
-		box-shadow: 0 25px 35px rgba(0,0,0,0.1); 
-	}
+.box-section .box-container .imgBx {
+	position: relative;
+	width: 800px;
+	height: 400px;
+	overflow: hidden;
+	box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+}
 
-	.box-section .box-container .imgBx img {
-		position: absolute;
-		top: 0; 
-		left: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
+.box-section .box-container .imgBx img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 
-	}
+}
 
-	.box-section .box-container .box-content {
-		position: absolute;
-		right: 0;
-		margin-top: 200px;
-		margin-bottom: 40px;
-		padding: 40px;
-		background: #333;
-		z-index: 1;
-		max-width: 400px;
-		color: #fff; 
-		box-shadow: 0 25px 35px rgba(0,0,0,0.1); 
-		border-bottom: 6px solid red; 
-	}
+.box-section .box-container .box-content {
+	position: absolute;
+	right: 0;
+	margin-top: 200px;
+	margin-bottom: 40px;
+	padding: 40px;
+	background: #333;
+	z-index: 1;
+	max-width: 400px;
+	color: #fff;
+	box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+	border-bottom: 6px solid red;
+}
 
 
 /* ------------------------------------------------------------------- 
@@ -4283,6 +4288,77 @@ html.no-csstransitions .s-hero__content {
  * # services
  *
  * ------------------------------------------------------------------- */
+.heading {
+
+	text-align: center;
+
+
+}
+
+.heading h2 {
+	font-weight: 600;
+	font-size: 30px;
+	font-family: var(--font-1);
+	font-weight: 400;
+	font-size: var(--text-md);
+	line-height: calc(1.125 * var(--space));
+
+}
+
+.services {
+	background: var(--color-bg);
+
+}
+
+
+
+.services .content {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+
+}
+
+.services .content .services-bx {
+	padding: 10px 10px;
+	background: var(--color-bg);
+	color: #fff;
+	max-width: 350px;
+	margin: 20px;
+	text-align: center;
+	transition: 0.5s;
+
+}
+
+.services .content .services-bx:hover {
+	margin-top: 10px;
+	color: var(--color-1);
+
+
+}
+
+.services .content .services-bx img {
+	max-width: 160px;
+	margin-top: 80px;
+	filter: invert(1);
+
+}
+
+
+
+.services .content .services-bx h2 {
+	font-size: 20px;
+	font-weight: 600;
+
+}
+
+.services .content .services-bx h2:hover {
+	color: var(--color-1);
+}
+
+
+
 .s-services {
 	background-color: var(--color-bg);
 	padding-top: calc(-30 * var(--space));

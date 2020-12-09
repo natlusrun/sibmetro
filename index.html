@@ -1,11 +1,16 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html class="no-js" lang="en">
 <head>
 
     <!--- basic page needs
     ================================================== -->
-    <meta charset="utf-8">
-    <title>СИБМЕТРО</title>
+	 <meta charset="utf-8">
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ТОО «SmartStroyService»</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -39,9 +44,9 @@
 
     <!-- favicons
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     
 		<style>
 			  body {
@@ -58,7 +63,9 @@
 </head>
 
 <body id="top">
-
+<!--[if lt IE 7]>
+			<p class="browsehappy">You ae using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
 
     <!-- preloader
     ================================================== -->
@@ -77,25 +84,25 @@
 		<a href="#" class="logo"> <img src="img/logo_sticky.png" alt="" style="width: 150px; height: 50px;">	</a> 
 		<div class="toggle" onclick="toggleMenu();"> </div>
 	
-		<ul class="menu">
+		<ul class="menu" >
 			<li>
-				<a href="#container">Главная</a>
+				<a href="#hero" class="smoothscroll">Главная</a>
 			</li>
 			<li class="dropdown">
-				<a href="#about" class="dropbtn">О компании</a>
+				<a href="#about" class="smoothscroll">О компании</a>
 				
 				
 
 	
 			<li class="dropdown">
-				<a href="#services" class="dropbtn">Направление</a>
+				<a href="#services" class="smoothscroll">Направление</a>
 				
 			
 			<li> 
-				<a href="#work">Наши проекты</a>
+				<a href="#work" class="smoothscroll">Наши проекты</a>
 			</li>
 		<li> 
-				<a href="#contact">Контакты</a>
+				<a href="#contact" class="smoothscroll">Контакты</a>
 			</li>
 		</ul>	
 	
@@ -255,6 +262,69 @@
         </div> -->
 
 	 </section> <!-- end s-about -->
+	
+    <section id="about" class="s-about">
+
+        <div class="horizontal-line"></div>
+
+        <div class="row">
+            <div class="column large-12">
+
+                <div class="section-title" data-num="02" data-aos="fade-up">
+                    <h3 class="h6">Наши направления</h3>
+                </div>
+
+            </div>
+
+            <div class="column large-6 w-900-stack s-about__intro-text">
+                <h1 class="display-1" data-aos="fade-up">
+						Направление
+
+						
+					 </h1>
+					 </div>
+					</section>
+	 <section class="services" id="services">
+
+		
+		<div class="content">
+			<div class="services-bx">
+				<img src="icons/icon1.png" alt="">
+				<h2 class="lead" > Подключение B2B </h2>
+				<!-- <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut quisquam cumque voluptate nesciunt, commodi</p> -->
+			</div>
+			<div class="services-bx">
+				<img src="icons/icon2.png" alt="">
+				<h2> Обслуживание сетей по РК </h2>
+				<!-- <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut quisquam cumque voluptate nesciunt, commodi</p> -->
+			</div>
+			<div class="services-bx">
+				<img src="icons/icon3.png" alt="">
+				<h2> Строительство FTTB по РК </h2>
+				<!-- <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut quisquam cumque voluptate nesciunt, commodi</p> -->
+			</div>
+			<div class="services-bx">
+				<img src="icons/icon4.png" alt="">
+				<h2> Частные включения </h2>
+				<!-- <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut quisquam cumque voluptate nesciunt, commodi</p> -->
+			</div>
+			<div class="services-bx">
+				<img src="icons/icon5.png" alt="">
+				<h2> Строительство магистралей </h2>
+				<!-- <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut quisquam cumque voluptate nesciunt, commodi</p> -->
+			</div>
+			<div class="services-bx">
+				<img src="icons/icon6.png" alt="">
+				<h2> Капитальное строительство  </h2>
+				<!-- <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut quisquam cumque voluptate nesciunt, commodi</p> -->
+			</div>
+			<div class="services-bx">
+				<img src="icons/icon7.png" alt="">
+				<h2> Проектирование </h2>
+				<!-- <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ut quisquam cumque voluptate nesciunt, commodi</p> -->
+			</div>
+		</div>
+	</section>
 	 <section id="about" class="s-about">
 
 		
@@ -272,10 +342,10 @@
                 </div>
             </div>
             <div class="column large-6 w-900-stack">
-                <h1 class="display-1" data-aos="fade-up">
+                <h2 class="display-1" data-aos="fade-up">
 						Сертифицированные менеджеры
 
-                </h1>
+                </h2>
             </div>
             <div class="column large-6 w-900-stack">
                 <p class="lead" data-aos="fade-up">
@@ -317,20 +387,7 @@
         </div>
 		
     </section> <!-- end s-services -->
-	 <section class="box-section"> 
-		 <div class="box">
-			 <h2 data-jarallax-element="0 -200"> Awesome Parallax </h2>
-			 <div class="box-container">
-				 <div class="imgBx jarallax">
-					 <img src="./img/beeline.png" alt="" class="jarallax-img">
-				 </div>
-				 <div class="box-content" data-jarallax-element="-200 0">
-					 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore magni sapiente deleniti repellat possimus harum hic voluptates laboriosam voluptatem suscipit recusandae quis laborum tempora numquam, architecto, eligendi itaque rerum neque!</p>
-					
-					</div>
-			 </div>
-		 </div>
-	 </section>
+	
     <section id="portfolio" class="s-portfolio">
 
         <div class="row s-porfolio__top">
@@ -341,26 +398,120 @@
                 </div>
             </div>
             <div class="column large-6 w-900-stack">
-                <h1 class="display-1" data-aos="fade-up">
+                <h3 class="display-2" data-aos="fade-up">
 						ТОО «СИБМЕТРО» обладает парком техники, а также есть рамочные договора с другими компаниями для привлечения специальной техники, необходимой для строительства:
 
-                </h1>
+                </h3>
             </div>
 		  </div> <!-- end s-portfolio__top-->
+		  <section class="box-section"> 
+			<div class="box">
 		
+				<div class="box-container">
+					<div class="imgBx jarallax">
+						<img src="./img/beeline.png" alt="" class="jarallax-img">
+					</div>
+					<div class="box-content" data-jarallax-element="-200 0">
+						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore magni sapiente deleniti repellat possimus harum hic voluptates laboriosam voluptatem suscipit recusandae quis laborum tempora numquam, architecto, eligendi itaque rerum neque!</p>
+					  
+					  </div>
+				</div>
+			</div>
+		</section>
 		 
     </section> <!-- end s-portfolio -->
 
 
     <!-- clients
     ================================================== -->
-   
+	 <section id="about" class="s-about">
+
+		<div class="horizontal-line"></div>
+
+		<div class="row">
+			 <div class="column large-12">
+
+				  <div class="section-title" data-num="04" data-aos="fade-up">
+						<h3 class="h6">ОПЫТ РАБОТЫ</h3>
+				  </div>
+
+			 </div>
+
+			 <div class="column large-6 w-900-stack s-about__intro-text">
+				  <h1 class="display-1" data-aos="fade-up">
+					ОПЫТ РАБОТЫ нашей команды С ТОО «КАР-ТЕЛ»
+
+
+					 
+				  </h1>
+
+				  <p class="lead" data-aos="fade-up">
+						 
+						 <br> Команда ТОО «SmartStroyService» имеет большой опыт работы с ТОО «Кар-Тел» и уже давно является надёжным бизнес-партнёром компании. 
+
+						
+						 
+						 
+						 
+<p class="lead" data-aos="fade-up">По каждому проекту нашей командой проводятся работы по оптимизации времени выполнений работы, а так же по налаживанию работ для более быстрого и эффективной коммуникации с заказчиками и ответственными сторонами проекта.
+	<br>
+	<br>
+– с 2011 до 2013: в компании «AVS-Line» подключено более 300 ТКД и 150 B2B клиентов <br>– с 2013 до 2015: в компании «Сибметро» подключено более 200 B2B клиентов
+<br>– с 2015 до 2017 подключено более 600 B2B клиентов, проложено и подключено более 40км магистральных
+сетей
+<br>– с 2017 до 2020 подключено более 1000 B2B клиентов в 11 городах РК, подключено более 50 АГУ, 
+<br>более 100 ТКД, обслуживались сети ТОО «Кар-Тел» в 8 крупнейших городах РК.
+
+
+
+</p>
+				  </p>
+			 </div>
+
+			 <div class="column large-6 w-900-stack s-about__photo-block">
+				  <div class="s-about__photo" data-aos="fade-up"></div>
+			 </div>
+		</div>
+		<div class="horizontal-line"></div>
+
+		<div class="row">
+			 <div class="column large-6">
+
+				  <div class="section-title" data-aos="fade-up">
+						
+				  </div>
+
+			 </div>
+			 <div class="column large-6 w-900-stack s-about__picture_block">
+				<div class="s-about__picture"></div>
+		  </div>
+			 <div class="column large-12 w-900-stack s-about__intro-text">
+				  <h1 class="display-1" data-aos="fade-up">
+					НАШИ ПЛАНЫ
+
+					 
+				  </h1>
+
+				  <p class="lead" data-aos="fade-up">
+					Команда ТОО «SmartStroyService» считает ТОО «Кар-Тел» надежным бизнес-партнёром и готово активно участвовать в его развитии, реализовывая следующие проекты: </p>
+					<p class="lead" data-aos="fade-up"> Развитие корпоративной сети б2б
+						<br class="lead" data-aos="fade-up">  Строительство локальных участков в рамках развития сети ШПД
+						<br class="lead" data-aos="fade-up" > 	Строительство магистральных линий связи
+						<br class="lead" data-aos="fade-up" > Обслуживание действующих линий связи
+						</p>
+					
+					
+			 </div>
+
+		
+			 </div>
+		</div>
 
 
     <!-- contact
     ================================================== -->
    
-
+	
 
     <!-- footer
     ================================================== -->
@@ -374,7 +525,7 @@
 								
 								
                         <p>
-									Товарищество с ограниченной ответственностью "СИБМЕТРО" <br>
+									Товарищество с ограниченной ответственностью «SmartStroyService» <br>
 									Республика Казахстан, 050010, <br>
 									г. Алматы ул. Водная, 26 <br>
 								<a href="tel:+7 (727) 317-17-07">тел.: +7 (727) 317-17-07</a>
@@ -388,10 +539,12 @@
                         <h4 class="h6">Ссылки</h4 class="h6">
         
                         <ul class="s-footer__list">
-                            <li><a href="#header">Главная</a></li>
-                            <li><a href="#0">Twitter</a></li>
-                            <li><a href="#0">Instagram</a></li>
-                            <li><a href="#0">Dribbble</a></li>
+                            <li><a href="#hero" class="smoothscroll">Главная</a></li>
+                            <li><a href="#0" class="smoothscroll">О компании</a></li>
+                            <li><a href="#0" class="smoothscroll">Направление</a></li>
+									 <li><a href="#0" class="smoothscroll">Наши проекты</a></li>
+                            <li><a href="#0" class="smoothscroll">Контакты</a></li>
+									 
                         </ul>
                     </div>
                 </div>
@@ -401,14 +554,14 @@
                 <a href="index.html" class="btn h-full-width">Главная</a>
 
                 <div class="ss-copyright">
-                    <span>Copyright Сибметро 2020</span> 
+                    <span>Copyright «SmartStroyService» 2020</span> 
                     <span>Design by <a href="https://www.styleshout.com/">natlusrun</a></span>
                 </div>
             </div>
 
             <div class="ss-go-top">
                 <a class="smoothscroll" title="Back to Top" href="#top">
-                    top
+                    Вверх
                 </a>
             </div> <!-- end ss-go-top -->
 

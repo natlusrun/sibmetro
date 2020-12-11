@@ -4627,22 +4627,24 @@ html.no-csstransitions .s-hero__content {
 	right: var(--gutter-lg);
 	left: var(--vspace-1);
 	bottom: var(--vspace-1);
+	padding-right: 40px;
+	
 }
-
+.s-services__photo-block {
+	position: relative;
+}
 
 .s-services__photo {
 	background-image: url("../images/beeline.jpg");
 	/* The image used */
-	background-color: #cccccc;
 	/* Used if the image is unavailable */
-	height: 500px;
-	width: 700px;
+	width: 80%;
+	max-width: 700px;
 	/* You must set a specified height */
-	background-position: center;
+	background-size: contain; 
 	/* Center the image */
 	background-repeat: no-repeat;
 	/* Do not repeat the image */
-	background-size: cover;
 	/* Resize the background image to cover the entire container */
 	position: absolute;
 	top: var(--vspace-0_5);
@@ -4652,9 +4654,7 @@ html.no-csstransitions .s-hero__content {
 
 }
 
-.s-services__photo-block {
-	position: relative;
-}
+
 
 /* ------------------------------------------------------------------- 
  * ## about process

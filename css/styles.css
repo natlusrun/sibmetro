@@ -329,6 +329,7 @@ body {
 	margin: 0;
 }
 
+
 /* Render the `main` element consistently in IE. */
 
 main {
@@ -1821,6 +1822,7 @@ body {
 	color: var(--color-text);
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
 }
 
 
@@ -4700,6 +4702,8 @@ html.no-csstransitions .s-hero__content {
 		left: auto;
 	}
 }
+
+
 
 @media screen and (max-width: 1000px) {
 	.s-about {

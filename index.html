@@ -9,20 +9,23 @@
     <!--- basic page needs
     ================================================== -->
 	 <meta charset="utf-8">
-	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>ТОО «SmartStroyService»</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- mobile specific metas
     ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+<meta name="HandheldFriendly" content="true">
 
     <!-- CSS
     ================================================== -->
 	 <link rel="stylesheet" href="css/styles.css">
-	 <link rel="stylesheet" href="css/jarallax.css">
+	
 	 <link rel="stylesheet" href="css/vendor.css">
+
 	
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@900&amp;display=swap">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -34,8 +37,8 @@
     ================================================== -->
     <script src="js/modernizr.js"></script>
 	 <script defer src="js/fontawesome/all.min.js"></script>
-	 <script src="js/jarallax-element.js"> </script>
-	 <script src="js/jarallax.js"> </script>
+	 
+	
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
@@ -75,8 +78,12 @@
     <header>
 		<a href="#" class="logo"> <img src="img/logo_sticky.png" alt="" style="width: 150px; height: 50px;">	</a> 
 		<div class="toggle" onclick="toggleMenu();"> </div>
-	
-		<ul class="menu" >
+		<div class="s-header__content"></div>
+		<nav class="s-header__nav-wrap">
+		
+       
+    
+		<ul class="s-header__nav" >
 			<li>
 				<a href="#hero" class="smoothscroll">Главная</a>
 			</li>
@@ -96,10 +103,13 @@
 		<li> 
 				<a href="#contact" class="smoothscroll">Контакты</a>
 			</li>
+			
 		</ul>	
 	
+	</nav>
+</div>
+	<!-- <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a> -->
 	</header> <!-- end s-header -->
-<!-- Swiper -->
 
     <!-- hero
     ================================================== -->
@@ -583,7 +593,7 @@
 
                 <div class="ss-copyright">
                     <span>Copyright «SmartStroyService» 2020</span> 
-                    <span>Design by <a href="https://github.com/natlusrun">natlusrun</a></span>
+                    <span>Design by <a href="https://github.com/natlusrun">SmartStroyService</a></span>
                 </div>
             </div>
 
@@ -640,10 +650,42 @@
     <!-- Java Script
 	 ================================================== -->
 	 <script>
-		jarallax(document.querySelectorAll('.jarallax'), {
-    speed: 0.5
+	
+	const ssMobileMenu = function() {
+
+const $toggleButton = $('.s-header__menu-toggle');
+const $headerContent = $('.s-header__content');
+const $siteBody = $("body");
+
+$toggleButton.on('click', function(event){
+	 event.preventDefault();
+	 $toggleButton.toggleClass('is-clicked');
+	 $siteBody.toggleClass('menu-is-open');
 });
 
+$headerContent.find('.s-header__nav a, .btn').on("click", function() {
+
+	 // at 900px and below
+	 if (window.matchMedia('(max-width: 900px)').matches) {
+		  $toggleButton.toggleClass('is-clicked');
+		  $siteBody.toggleClass('menu-is-open');
+	 }
+});
+
+$WIN.on('resize', function() {
+
+	 // above 900px
+	 if (window.matchMedia('(min-width: 901px)').matches) {
+		  if ($siteBody.hasClass("menu-is-open")) $siteBody.removeClass("menu-is-open");
+		  if ($toggleButton.hasClass("is-clicked")) $toggleButton.removeClass("is-clicked");
+	 }
+});
+
+};
+
+
+
+	
 	</script>
 
 <script src="js/jquery-3.2.1.min.js"></script>
